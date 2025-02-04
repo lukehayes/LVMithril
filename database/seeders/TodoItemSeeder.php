@@ -18,8 +18,8 @@ class TodoItemSeeder extends Seeder
         {
             DB::table('todo_items')->insert([
                 'name' => "Todo Item $i",
-                'description' => "Description $i",
-                'completed' => false
+                'description' => "I am the description number: $i",
+                'completed' => random_int(0,1)
             ]);
         }
     }
