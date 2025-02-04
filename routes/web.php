@@ -1,12 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\TodoItem;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/todos', function () {
-    return view('app');
+Route::view('/', 'app');
+
+Route::get('/api/todos', function () {
+    return TodoItem::all();
 });
 
