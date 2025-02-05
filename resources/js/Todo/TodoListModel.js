@@ -1,5 +1,9 @@
+import m from 'mithril'
+
 let TodoListModel = {
+
     items: [],
+
     getTodoItems: function()
     {
         return m.request({
