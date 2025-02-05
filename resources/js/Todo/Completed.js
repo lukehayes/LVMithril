@@ -1,6 +1,7 @@
 import m from 'mithril'
 
 let CompletedComponent = {
+
     view: function(vnode)
     {
         let completed = vnode.attrs.completed;
@@ -15,4 +16,4 @@ let CompletedComponent = {
     }
 }
 
-export default CompletedComponent;
+export { CompletedComponent };
