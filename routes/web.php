@@ -6,7 +6,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/todos', function () {
+Route::get('/app', function () {
     return view('app');
 });
+
+
+Route::resource('todos', \App\Http\Controllers\TodoController::class);
 

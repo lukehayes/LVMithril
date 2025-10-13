@@ -11,7 +11,7 @@ class TodoController extends Controller
      */
     public function index()
     {
-        //
+        return \App\Models\TodoItem::all();
     }
 
     /**
@@ -35,7 +35,7 @@ class TodoController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return \App\Models\TodoItem::find($id);
     }
 
     /**
