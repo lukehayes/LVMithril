@@ -11,7 +11,7 @@ class TodoController extends Controller
      */
     public function index()
     {
-        return \App\Models\TodoItem::all();
+		return \App\Models\TodoItem::all()->toJson();
     }
 
     /**
