@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\TodoController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -10,6 +12,5 @@ Route::get('/app', function () {
     return view('app');
 });
 
-
-Route::resource('todos', \App\Http\Controllers\TodoController::class);
+Route::resource('app/todos', \App\Http\Controllers\TodoController::class);
 
