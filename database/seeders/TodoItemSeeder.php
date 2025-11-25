@@ -13,11 +13,18 @@ class TodoItemSeeder extends Seeder
      */
     public function run(): void
     {
+        $items = [
+            'Write unit tests using Pest.',
+            'Write application code.',
+            'Brew Coffee.',
+            'Drink Coffee.',
+            'Read about C++ rule of five.'
+        ];
 
-        for($i = 0; $i <= 5; $i++)
+        for($i = 0; $i <= 5 - 1; $i++)
         {
             DB::table('todo_items')->insert([
-                'name' => "Todo Item $i",
+                'name' => $items[$i],
                 'description' => "Description $i",
                 'completed' => false
             ]);
