@@ -2,17 +2,20 @@ import './bootstrap';
 import m from 'mithril'
 import Item from './model/Item'
 
-let root            = document.getElementById('app');
-let containerStyles = 'container mx-auto';
-let fontStyles      = 'font-bold';
+
+let root = document.getElementById('app');
 
 let App =
 {
+	styles: 'container mx-auto',
 	oninit: Item.loadItems,
 
 	view: function()
 	{
-		return m(Item)
+		return m('.app', { class: this.styles },
+		[
+			m(Item),
+		])
 	}
 }
 
