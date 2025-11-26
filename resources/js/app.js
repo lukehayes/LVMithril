@@ -4,7 +4,6 @@ import m from 'mithril'
 let root            = document.getElementById('app');
 let containerStyles = 'container mx-auto';
 let fontStyles      = 'font-bold';
-
 let Item =
 {
 	items: [],
@@ -23,7 +22,7 @@ let Item =
 
 	view: function()
 	{
-		return m('div', Item.items.map( function() {
+		return m('div', Item.items.map( function(item) {
 			return m('div', {class: 'py-2 my-4' }, item.id + ': ' + item.name)
 		}))
 	}
@@ -35,7 +34,7 @@ let App =
 
 	view: function()
 	{
-		return m('.app', Item)
+		return m(Item)
 	}
 }
 
