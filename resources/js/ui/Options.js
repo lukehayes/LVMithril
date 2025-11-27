@@ -3,7 +3,11 @@ import m from 'mithril'
 let Options = {
 	view: function()
 	{
-		return ('.options', { class:'flex flex-row' })
+		return (
+            'div',
+            { class: 'bg-red-400 p-4' },
+            'Options Component'
+        )
 	}
 }
 
